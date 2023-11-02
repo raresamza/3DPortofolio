@@ -35,7 +35,7 @@ const About = () => {
       <motion.p className='mt-4 text-secondary text-[17px] max-w-7xl leading-[30px]' variants={fadeIn("", "", 0.1, 1)}>
         
       </motion.p>
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-wrap justify-center gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

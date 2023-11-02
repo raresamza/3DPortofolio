@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { styles } from '../styles'
 import { navLinks } from '../constants'
-import { logo, menu, close } from '../assets'
+import { logo, menu, close,logonobg } from '../assets'
 
 const Navbar = () => {
   const [active, setActive] = useState("")
@@ -17,7 +17,7 @@ const Navbar = () => {
           setActive("");
           window.scrollTo(0, 0);
         }}>
-          <img src={logo} alt="logo" className='w-9 h-9 object-contain'></img>
+          <img src={logonobg} alt="logo" className='w-14 h-14 object-contain'></img>
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>Rares &nbsp; <span className='sm:block hidden'>| Amza </span></p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
