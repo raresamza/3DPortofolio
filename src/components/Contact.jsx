@@ -18,28 +18,27 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    
-    const  value  = e.target.value;
+
+    const value = e.target.value;
 
     setForm({
       ...form,
       [e.target.name]: value,
     });
-    console.log(form.email)
+    console.log(form.name)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
     emailjs
       .send(
         'service_951q5np',
         'template_voqgl3s',
         {
-          from_name: form.name,
+          name: form.name,
           to_name: "Rares",
-          from_email: form.email,
+          email: form.email,
           to_email: "raresamzagmail.com",
           message: form.message,
         },
@@ -47,6 +46,12 @@ const Contact = () => {
       )
       .then(
         () => {
+              console.log("test")
+    console.log(form.name)
+    console.log("test")
+    console.log(form.email)
+    console.log("test")
+    console.log(form.message)
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
 
